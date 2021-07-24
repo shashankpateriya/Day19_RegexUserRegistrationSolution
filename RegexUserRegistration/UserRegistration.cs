@@ -7,13 +7,13 @@ namespace RegexUserRegistration
 {
     class UserRegistration
     {
-        public void validateFirstName(string firstName)
+        public void validateLastName(string lastName)
         {
-            string stringForFirstName = "^[A-Z][a-z]{3,}$";
-            if (Regex.IsMatch(firstName, stringForFirstName))
-                Console.WriteLine(firstName + " is Valid");
+            string stringForLastName = "^[A-Z][a-z]{3,}$";
+            if (Regex.IsMatch(lastName, stringForLastName))
+                Console.WriteLine(lastName + " is Valid");
             else
-                Console.WriteLine(firstName + " is Invalid");
+                Console.WriteLine(lastName + " is Invalid");
         }
     }
 
