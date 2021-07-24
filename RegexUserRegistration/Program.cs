@@ -7,10 +7,9 @@ namespace RegexUserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration");
-            Console.WriteLine("MobileNo should start with country code");
-            Console.WriteLine("follow by space and 10 digit number");
+            Console.WriteLine("*Password should contain minimum 8 Characters");
             UserRegistration validateUser = new UserRegistration();
-            validateUser.validateMobileNo("91 7974146785");
+            validateUser.validatePassword("shashank10@1997");
             Console.ReadKey();
         }
     }

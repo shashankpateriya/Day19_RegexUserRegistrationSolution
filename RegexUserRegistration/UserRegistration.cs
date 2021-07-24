@@ -7,14 +7,13 @@ namespace RegexUserRegistration
 {
     class UserRegistration
     {
-        public void validateMobileNo(string mobileNo)
+        public void validatePassword(string password)
         {
-            string stringForMobileNo = "^[0-9]{1,3}[ ][6-9][0-9]{9}$";
-            if (Regex.IsMatch(mobileNo, stringForMobileNo))
-                Console.WriteLine(mobileNo + " is Valid");
+            string stringForPassword = "[A-Za-z0-9]{8,}?";
+            if (Regex.IsMatch(password, stringForPassword))
+                Console.WriteLine(password + " is Valid");
             else
-                Console.WriteLine(mobileNo + " is Invalid");
+                Console.WriteLine(password + " is Invalid");
         }
     }
-
 }
