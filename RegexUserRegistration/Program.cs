@@ -9,7 +9,7 @@ namespace RegexUserRegistration
             Console.WriteLine("Welcome to User Registration");
             Console.WriteLine("*Password should contain minimum 8 Characters");
             UserRegistration validateUser = new UserRegistration();
-            validateUser.validatePassword("shashank10@1997");
+            validateUser.validatePassword("Shashank10@1997");
             Console.ReadKey();
         }
     }

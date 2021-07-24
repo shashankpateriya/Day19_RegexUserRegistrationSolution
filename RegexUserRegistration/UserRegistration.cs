@@ -9,7 +9,7 @@ namespace RegexUserRegistration
     {
         public void validatePassword(string password)
         {
-            string stringForPassword = "[A-Za-z0-9]{8,}?";
+            string stringForPassword = "[A-Z]+.{8,}?";
             if (Regex.IsMatch(password, stringForPassword))
                 Console.WriteLine(password + " is Valid");
             else
