@@ -7,13 +7,13 @@ namespace RegexUserRegistration
 {
     class UserRegistration
     {
-        public void validatePassword(string password)
+        public void validateEmail(string email)
         {
-            string stringForPassword = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
-            if (Regex.IsMatch(password, stringForPassword))
-                Console.WriteLine(password + " is Valid");
+            string stringForEmail = "^[A-Z0-9a-z]+([+-.#$^*][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][A-Za-z]{2,}([.][a-zA-Z]{2,})?$";
+            if (Regex.IsMatch(email, stringForEmail))
+                Console.WriteLine(email + " is Valid");
             else
-                Console.WriteLine(password + " is Invalid");
+                Console.WriteLine(email + " is Invalid");
         }
     }
 }
