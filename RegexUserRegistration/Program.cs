@@ -7,11 +7,10 @@ namespace RegexUserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration");
-            Console.WriteLine("Email should have @");
-            Console.WriteLine("Email should have a first name");
-            Console.WriteLine("Email should have a domain name");
+            Console.WriteLine("MobileNo should start with country code");
+            Console.WriteLine("follow by space and 10 digit number");
             UserRegistration validateUser = new UserRegistration();
-            validateUser.validateEmail("shashank.pateriya4@gmail.co.in");
+            validateUser.validateMobileNo("91 7974146785");
             Console.ReadKey();
         }
     }
