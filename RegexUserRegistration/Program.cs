@@ -11,6 +11,7 @@ namespace RegexUserRegistration
             Console.WriteLine("Length of name should be minimum three characters.");
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Shashank");
+
             Console.ReadKey();
         }
     }
