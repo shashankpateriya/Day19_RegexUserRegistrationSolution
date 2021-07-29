@@ -5,15 +5,42 @@ using System.Text.RegularExpressions;
 
 namespace RegexUserRegistration
 {
-    class UserRegistration
+    public class UserRegistration
     {
-        public void validateEmail(string email)
+        public static string Regex_FirstName = "^[A-Z][a-z]{3,}$";
+        public static string Regex_LastName = "^[A-Z][a-z]{3,}$";
+        public static string Regex_Email = "^[A-Z0-9a-z]{1,}([.#$^][A-Za-z0-9]+)?[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
+        public static string Regex_Number = "^[0-9]{2}[ ][6-9][0-9]{9}$";
+        public static string Regex_Password = "^[a-zA-Z0-9]{1,}[!@#$%^&]{1}([a-zA-Z0-9])*$";
+
+
+        public bool ValidateFirstName(string FirstName)
         {
-            string stringForEmail = "^[A-Z0-9a-z]+([+-.#$^*][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][A-Za-z]{2,}([.][a-zA-Z]{2,})?$";
-            if (Regex.IsMatch(email, stringForEmail))
-                Console.WriteLine(email + " is Valid");
-            else
-                Console.WriteLine(email + " is Invalid");
+            return Regex.IsMatch(FirstName, Regex_FirstName);
+        }
+
+
+        public bool ValidateLastName(string LastName)
+        {
+            return Regex.IsMatch(LastName, Regex_LastName);
+        }
+
+
+        public bool validateEmail(string email)
+        {
+            return Regex.IsMatch(email, Regex_Email);
+        }
+
+
+        public bool validatenumber(string number)
+        {
+            return Regex.IsMatch(number, Regex_Number);
+        }
+
+
+        public bool validatePassword(string password)
+        {
+            return Regex.IsMatch(password, Regex_Password);
         }
     }
 }
