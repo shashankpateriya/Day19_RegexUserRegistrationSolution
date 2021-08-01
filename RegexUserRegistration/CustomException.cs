@@ -11,7 +11,6 @@ namespace RegexUserRegistration
         public enum ExceptionType
         {
             NULL_MESSAGE,
-            EMPTY_MESSAGE,
             INVALID_INPUT
         }
 
