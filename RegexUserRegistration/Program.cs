@@ -32,4 +32,5 @@ namespace RegexUserRegistration
             obj.validatePassword(password);
         }
     }
+
 }
